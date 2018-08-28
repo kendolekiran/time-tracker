@@ -2,21 +2,13 @@ const express = require('express');
 const app = express();
 const router = new express.Router([]);
 const bodyParser = require('body-parser');
-const winston = require('winston');
-const expressWinston = require('express-winston');
+const morgan = require('morgan');
 const low = require('lowdb');
 const FileAsync = require('lowdb/adapters/FileAsync');
 const adapter = new FileAsync('db.json');
 const db = low(adapter);
 
-app.use(expressWinston.logger({
-  transports: [
-    new winston.transports.Console({
-      json: true,
-      colorize: true
-    })
-  ]
-}));
+app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use('/api', router);
 
