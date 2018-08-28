@@ -4,9 +4,7 @@ import { Component } from '@angular/core';
   selector: 'geo-location',
   templateUrl: './app.component.html',
   styleUrls: [
-    './app.component.css',
-    '../assets/css/common.css',
-    '../assets/css/bootstrap.min.css'
+    './app.component.scss'
   ]
 })
 export class AppComponent {
