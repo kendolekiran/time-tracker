@@ -5,20 +5,16 @@ import { AppComponent } from './app.component';
 
 import  { FooterModule } from '../components/footer/footer.module';
 import  { HeaderModule } from '../components/header/header.module';
-import  { TodoWidgetModule } from '../components/todo-widget/todo-widget.module';
-import { MyInputComponent } from '../components/my-input/my-input.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    MyInputComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     HeaderModule,
-    FooterModule,
-    TodoWidgetModule
+    FooterModule
   ],
   providers: [],
   bootstrap: [

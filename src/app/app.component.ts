@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'geo-location',
+  selector: 'time-tracker',
   templateUrl: './app.component.html',
   styleUrls: [
     './app.component.scss'
   ]
 })
 export class AppComponent {
-  title = 'TODO List';
+  title = 'Time Tracker';
 }
