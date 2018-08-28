@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TimeTrackerApiService } from "@api";
 
 @Component({
   selector: 'time-tracker',
@@ -9,4 +10,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Time Tracker';
+  message: string;
+
+  constructor(
+    private timeTrackerApi: TimeTrackerApiService
+  ) {
+    this.message = timeTrackerApi.get();
+  }
 }
