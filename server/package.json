@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Kiran7700/time-tracker#readme",
   "dependencies": {
+    "body-parser": "1.18.3",
     "express": "4.16.3",
     "lowdb": "1.0.0"
   },
