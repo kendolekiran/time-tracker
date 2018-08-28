@@ -15,6 +15,10 @@ export class AppComponent {
   constructor(
     private timeTrackerApi: TimeTrackerApiService
   ) {
-    this.message = timeTrackerApi.get();
+    timeTrackerApi.get().subscribe(this.apiHandler.bind(this));
+  }
+
+  private apiHandler(data: any): void {
+    this.message = data.message;
   }
 }
