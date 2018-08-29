@@ -17,6 +17,7 @@ import { AuthService } from '../services/auth/auth.service';
 
 import { TaskListComponent } from '../components/task-list/task-list.component';
 import { LoginComponent } from '../pages/login/login.component';
+import { ListComponent } from '../pages/list/list.component';
 import { PageNotFoundComponent } from '../pages/page-not-found/page-not-found.component';
 import { EditListComponent } from '../pages/edit-list/edit-list.component';
 
@@ -26,7 +27,8 @@ import { EditListComponent } from '../pages/edit-list/edit-list.component';
     TaskListComponent,
     LoginComponent,
     PageNotFoundComponent,
-    EditListComponent
+    EditListComponent,
+    ListComponent
   ],
   imports: [
     AppRoutingModule,

@@ -1,6 +1,7 @@
 import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from '../pages/login/login.component';
+import { ListComponent } from '../pages/list/list.component';
 import { PageNotFoundComponent } from '../pages/page-not-found/page-not-found.component';
 import { EditListComponent } from '../pages/edit-list/edit-list.component';
 
@@ -8,6 +9,10 @@ const appRoutes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'list',
+    component: ListComponent
   },
   {
     path: '',
