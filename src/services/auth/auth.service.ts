@@ -5,7 +5,7 @@ export class AuthService {
 
   constructor() { }
 
-  logiIn(): void {
+  logIn(): void {
     // TODO: call login api here and store session storage if logged in
   }
 
