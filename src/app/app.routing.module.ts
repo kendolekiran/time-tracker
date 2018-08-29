@@ -2,6 +2,7 @@ import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from '../pages/login/login.component';
 import { PageNotFoundComponent } from '../pages/page-not-found/page-not-found.component';
+import { EditListComponent } from '../pages/edit-list/edit-list.component';
 
 const appRoutes: Routes = [
   {
@@ -12,6 +13,14 @@ const appRoutes: Routes = [
     path: '',
     redirectTo: '/login',
     pathMatch: 'full'
+  },
+  {
+    path: 'add',
+    component: EditListComponent
+  },
+  {
+    path: 'edit/:id',
+    component: EditListComponent
   },
   {
     path: '**',
