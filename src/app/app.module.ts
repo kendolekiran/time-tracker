@@ -11,11 +11,9 @@ import { AppRoutingModule } from './app.routing.module';
 
 import  { FooterModule } from '../components/footer/footer.module';
 import  { HeaderModule } from '../components/header/header.module';
-
 import { TimeTrackerApiService } from '@api';
 import { AuthService } from '../services/auth/auth.service';
 
-import { TaskListComponent } from '../components/task-list/task-list.component';
 import { LoginComponent } from '../pages/login/login.component';
 import { ListComponent } from '../pages/list/list.component';
 import { PageNotFoundComponent } from '../pages/page-not-found/page-not-found.component';
@@ -24,7 +22,6 @@ import { EditListComponent } from '../pages/edit-list/edit-list.component';
 @NgModule({
   declarations: [
     AppComponent,
-    TaskListComponent,
     LoginComponent,
     PageNotFoundComponent,
     EditListComponent,
