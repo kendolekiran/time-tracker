@@ -1,3 +1,32 @@
-<p>
-  edit-list works!
-</p>
+<form [formGroup]="trackerForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="name">Task Name</label>
+    <input id="name" type="text" class="form-control" formControlName="name" />
+  </div>
+  <div class="form-group">
+    <label for="startTime">Start Time</label>
+    <input id="startTime" type="time" class="form-control" formControlName="startTime" />
+  </div>
+  <div class="form-group">
+    <label for="endTime">End Time</label>
+    <input id="endTime" type="time" class="form-control" formControlName="endTime" />
+  </div>
+  <div class="form-group">
+    <label for="description">Task Description</label>
+    <textarea id="description" class="form-control" rows="3" formControlName="description"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="status">Task Status</label>
+    <select id="status" class="form-control" formControlName="status">
+      <option value="inProgress">In Progress</option>
+      <option value="partiallyDone">Partially Done</option>
+      <option value="done">Done</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="comments">Comments</label>
+    <textarea id="comments" class="form-control" rows="3" formControlName="comments"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <a type="button" class="btn btn-secondary" routerLink="['list']">Cancel</a>
+</form>
