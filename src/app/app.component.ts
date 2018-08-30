@@ -10,7 +10,7 @@ import { TimeTrackerApiService } from "@api";
 })
 export class AppComponent {
   title = 'Time Tracker';
-  message: string;
+  trackers: any;
 
   constructor(
     private timeTrackerApi: TimeTrackerApiService
@@ -19,6 +19,6 @@ export class AppComponent {
   }
 
   private apiHandler(data: any): void {
-    this.message = data.message;
+    this.trackers = JSON.stringify(data);
   }
 }

@@ -1,1 +1,12 @@
-{}
+{
+  "trackers": [
+    {
+      "name": "New Task",
+      "startTime": "02:01",
+      "endTime": "02:04",
+      "description": "New Task",
+      "status": "inProgress",
+      "comments": "New Task"
+    }
+  ]
+}

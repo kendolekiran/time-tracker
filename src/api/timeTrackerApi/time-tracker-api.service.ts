@@ -9,8 +9,12 @@ export class TimeTrackerApiService {
     private http: HttpClient
   ) { }
 
-  get(): Observable<string> {
-    return this.http.get<string>('/api/time-tracker');
+  get(): Observable<any> {
+    return this.http.get<any>('/api/time-tracker');
+  }
+
+  post(tracker: any): Observable<any> {
+    return this.http.post<any>('/api/time-tracker', tracker);
   }
 
 }

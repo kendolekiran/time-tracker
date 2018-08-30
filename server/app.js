@@ -4,15 +4,29 @@ const router = new express.Router([]);
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const low = require('lowdb');
-const FileAsync = require('lowdb/adapters/FileAsync');
-const adapter = new FileAsync('db.json');
+const FileSync = require('lowdb/adapters/FileSync');
+const adapter = new FileSync('db.json');
 const db = low(adapter);
+const lodashId = require('lodash-id');
+
+db._.mixin(lodashId);
+db.defaults({ trackers: [] }).write();
 
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use('/api', router);
 
-router.get('/time-tracker', (req, res) => res.json({message: 'Hello World!'}));
+const getTrackers = (req, res) => {
+  res.json(db.get('trackers').value());
+};
+
+const addTracker = (req, res) => {
+  res.json(db.get('trackers').push(req.body).write());
+};
+
+router.route('/time-tracker')
+  .get(getTrackers.bind(this))
+  .post(addTracker.bind(this));
 
 // TODO: create endpoints and use db object
 
