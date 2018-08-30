@@ -1,48 +1,40 @@
-<div class="panel-group">
-  <div class="panel panel-default">
-    <div class="table">
-      <div class="row font-weight-bold">
-        <div class="col-2">
-          <span>Task Name</span>
+<div class="container">
+  <div
+    *ngFor="let item of list; index as i">
+    <div class="card mb-2">
+      <div class="card-body">
+        <div class="row mb-4">
+          <div class="col">
+            <label class="d-block mb-0 font-weight-bold">Task Name</label>
+            <span>{{item.taskName}}</span>
+          </div>
+          <div class="col">
+            <label class="d-block mb-0 font-weight-bold">Started On</label>
+            <span>{{item.startDateTime}}</span>
+          </div>
+          <div class="col">
+            <label class="d-block mb-0 font-weight-bold">Ended On</label>
+            <span>{{item.endDateTime}}</span>
+          </div>
         </div>
-        <div class="col-2">
-          <span>Task Description</span>
+        <div class="row mb-4">
+          <div class="col-4">
+            <label class="d-block mb-0 font-weight-bold">Status</label>
+            <span>{{item.taskStatus}}</span>
+          </div>
+          <div class="col-8">
+            <label class="d-block mb-0 font-weight-bold">Description</label>
+            <span>{{item.taskDescription}}</span>
+          </div>
         </div>
-        <div class="col-2">
-          <span>Started at</span>
-        </div>
-        <div class="col-2">
-          <span>Ended at</span>
-        </div>
-        <div class="col-2">
-          <span>Task Status</span>
-        </div>
-        <div class="col-2">
-          <span>Comments</span>
-        </div>
-      </div>
-      <div
-        class="row"
-        *ngFor="let item of list">
-        <div class="col-2">
-          <span>{{item.taskName}}</span>
-        </div>
-        <div class="col-2">
-          <span>{{item.taskDescription}}</span>
-        </div>
-        <div class="col-2">
-          <span>{{item.startDateTime}}</span>
-        </div>
-        <div class="col-2">
-          <span>{{item.endDateTime}}</span>
-        </div>
-        <div class="col-2">
-          <span>{{item.taskStatus}}</span>
-        </div>
-        <div class="col-2">
-          <span>{{item.comments}}</span>
+        <div class="row">
+          <div class="col-12">
+            <label class="d-block mb-0 font-weight-bold">Comments</label>
+            <span>{{item.comments}}</span>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
